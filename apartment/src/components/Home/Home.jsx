@@ -2,6 +2,7 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { SortAndFilterButtons } from "../SortAndFilterButtons/SortAndFilterButton"
+import './Home.css'
 
 export const Home = ()=>{
     const [list, setList] = useState([])
@@ -30,9 +31,9 @@ export const Home = ()=>{
 
 
     return(
-        <div>
+        <div  className="mainh">
             
-            <div className="searchBar">
+            <div className="search">
                 <input id="search" type="text" />
                 <button id="submit">Search</button>
             </div>
@@ -42,20 +43,20 @@ export const Home = ()=>{
             />
 
             <h1>Table for Apartments</h1>
-           <table>
+           <table className="table">
                <thead>
                    <tr>
-                       <td>Id</td>
-                       <td>Block</td>
-                       <td>Flat No</td>
-                       <td>Total Flats</td>
-                       <td>Resident Type</td>
-                       <td>View</td>
+                       <td><b>Id</b></td>
+                       <td><b>Block</b></td>
+                       <td><b>Flat No</b></td>
+                       <td><b>Total Flats</b></td>
+                       <td><b>Resident Type</b></td>
+                       <td><b>View</b></td>
                    </tr>
                </thead>
                {
                    list.map(e=>
-                       <tbody>
+                       <tbody className="data">
                            <tr>
                                <td>{e.id}</td>
                                <td>{e.block}</td>
@@ -64,7 +65,7 @@ export const Home = ()=>{
                                <td>{e.residenttype}</td>
                                <td>
                                   <Link to="/flat">
-                                  <button 
+                                  <button id="view"
                                    onClick={()=>{
                                        
                                    }}

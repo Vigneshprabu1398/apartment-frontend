@@ -1,3 +1,5 @@
+import './Sort.css'
+
 export const SortAndFilterButtons = ({handleSort})=>{
     return (
         <div>

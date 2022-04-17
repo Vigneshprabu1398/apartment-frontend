@@ -1,0 +1,34 @@
+.mainh{
+    text-align: center;
+    align-items: center;
+}
+
+#submit{
+    margin-top: 5px;
+    background-color: green;
+    margin-left: 6%;
+
+}
+#submit:hover{
+    cursor: pointer;
+}
+.table{
+   margin-left: 20%;
+   width: 800px;
+   border: solid black 1px;
+}
+thead>td{
+    
+    justify-content: space-evenly;
+}
+.data{
+    text-align: center;
+}
+#view{
+height: 30px;
+font-size: small;
+}
+#view:hover{
+    cursor: pointer;
+    background-color: green;
+}
